@@ -46,5 +46,17 @@
     "blockNumber": 0,
     "tag": "Faucet deployed by deploy script",
     "extra": {}
+  },
+  {
+    "name": "Faucet",
+    "address": "0xAe7b1b1e458D8EbC8e656A2B87fcbE989831e692",
+    "network": "nova",
+    "deployer": "0xC89F6C6DF2f2e29AfFA81E19515CC08579a93980",
+    "deploymentDate": "Wed Dec 20 2023 22:43:58 GMT-0500 (Eastern Standard Time)",
+    "chainId": 1002,
+    "blockHash": "",
+    "blockNumber": 0,
+    "tag": "Faucet deployed by deploy script",
+    "extra": {}
   }
 ]
