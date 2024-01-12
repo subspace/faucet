@@ -6,7 +6,7 @@ import { contracts } from '../../constants/contracts'
 import { networks } from '../../constants/networks'
 import { createStats, findStats, updateStats } from '../../utils'
 
-type AccountType = 'github' | 'discord'
+type AccountType = 'github' | 'discord' | 'auto'
 
 const faunaDbClient = new Client({
   secret: process.env.FAUNA_DB_SECRET || '',
@@ -122,6 +122,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.error('Error requesting token', error)
+    res.setHeader('Access-Control-Allow-Origin', [
+      'https://subspace.network',
+      'https://subspacefaucet.com',
+      'https://subspace.tools/'
+    ])
     res.status(400).json({
       message: 'Error',
       error: JSON.stringify(error)
